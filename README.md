@@ -9,17 +9,17 @@ Current Version: Updated and restructured in March 2025
 ## Tech Stack:
 #### Mobile Framework: React Native 0.68.2
 #### JS Runtime: Node.js v16.20.2
-. Native Modules: Firebase SDk, React-native-gesture-handler
-Authentication: Firebase Auth
-UI & Navigation: React Navigation, React Native Paper, Swiper
-State Management: Redux, Redux Thunk, Redux Persist
-Android SDK: Target SDK 33+, JDK 11
-Build Tooling: Gradle, Jetifier, Metro Bundler
-Language Support: Kotlin (support updated for multiple versions)
+#### Native Modules: Firebase SDk, React-native-gesture-handler
+#### Authentication: Firebase Auth
+#### UI & Navigation: React Navigation, React Native Paper, Swiper
+#### State Management: Redux, Redux Thunk, Redux Persist
+#### Android SDK: Target SDK 33+, JDK 11
+#### Build Tooling: Gradle, Jetifier, Metro Bundler
+#### Language Support: Kotlin (support updated for multiple versions)
 
 ## What Was Done in the March 2025 Update
-Resolved compatibility issues
-Updated dependencies (Firebase, Gesture Handler, Kotlin stdlib, etc.)
+1. Resolved compatibility issues
+2. Updated dependencies (Firebase, Gesture Handler, Kotlin stdlib, etc.)
 Handled Gradle errors and build warnings
 Built working debug and release APKs
 Ensured app runs smoothly on emulators and real devices
