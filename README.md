@@ -64,9 +64,9 @@ This version does not rely on Metro and can run independently.
 
 ## Version Control Workflow
 ### To work on updates:
-git add .
-git commit -m "Updated app for March 2025 release"
-git push origin master
+1. git add .
+2. git commit -m "Updated app for March 2025 release"
+3. git push origin branch
 
 ## Contributions
 This update was executed by Abdulrahman Laoye, a developer on the Bincom Mobile App Team. Focused on refactoring, dependency upgrades, fixing build issues, and improving project maintainability.
