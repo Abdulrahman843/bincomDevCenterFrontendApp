@@ -7,8 +7,8 @@ Last Version: Updated in 2024
 Current Version: Updated and restructured in March 2025
 
 ## Tech Stack:
-. Mobile Framework: React Native 0.68.2
-. JS Runtime: Node.js v16.20.2
+#### Mobile Framework: React Native 0.68.2
+#### JS Runtime: Node.js v16.20.2
 . Native Modules: Firebase SDk, React-native-gesture-handler
 Authentication: Firebase Auth
 UI & Navigation: React Navigation, React Native Paper, Swiper
