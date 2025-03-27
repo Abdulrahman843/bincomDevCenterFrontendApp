@@ -35,25 +35,25 @@ Current Version: Updated and restructured in March 2025
 
 ## Installation & Environment Setup
 1. Clone the Repository
- git clone git@gitlab.bincom.net:bincomdevcenter/bincomdevcenterappfrontend.git
- cd bincomdevcenterappfrontend
+git clone git@gitlab.bincom.net:bincomdevcenter/bincomdevcenterappfrontend.git
+cd bincomdevcenterappfrontend
 2. Install Dependencies
-a) npm install
-b) Ensure Java & Android Setup
-i) $env:JAVA_HOME="C:\Program Files\Java\jdk-11"
-ii) $env:PATH="$env:JAVA_HOME\bin;$env:PATH"
-iii) $env:ORG_GRADLE_JAVA_HOME="C:\Program Files\Java\jdk-11"
-Start Metro Bundler (for Debug)
+npm install
+3. Ensure Java & Android Setup
+$env:JAVA_HOME="C:\Program Files\Java\jdk-11"
+$env:PATH="$env:JAVA_HOME\bin;$env:PATH"
+$env:ORG_GRADLE_JAVA_HOME="C:\Program Files\Java\jdk-11"
+4. Start Metro Bundler (for Debug)
 npx react-native start --reset-cache
-Run the App on Emulator
+5. Run the App on Emulator
 npx react-native run-android
-Building APKs
+6. Building APKs
 Debug APK (requires Metro)
 cd android
 .\gradlew assembleDebug
-Find the APK here:
+7. Find the APK here:
  android/app/build/outputs/apk/debug/app-debug.apk
-Release APK (offline-ready)
+8. Release APK (offline-ready)
 cd android
 .\gradlew clean
 .\gradlew assembleRelease
@@ -61,9 +61,9 @@ cd android
 Find the APK here:
  android/app/build/outputs/apk/release/app-release.apk
 This version does not rely on Metro and can run independently.
-Version Control Workflow
 
-## To work on updates:
+## Version Control Workflow
+### To work on updates:
 git add .
 git commit -m "Updated app for March 2025 release"
 git push origin master
