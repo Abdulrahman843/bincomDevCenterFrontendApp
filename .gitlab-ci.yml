@@ -1,0 +1,52 @@
+stages:
+  - build
+  - sign
+
+variables:
+  ANDROID_COMPILE_SDK: "33"
+  ANDROID_BUILD_TOOLS: "30.0.3"
+  
+build:
+  stage: build
+  image: openjdk:11
+  cache:
+    key: npm
+    policy: pull-push
+    paths:
+      - node_modules
+      - /usr/lib/android-sdk
+      - .npm/
+
+  script:
+
+
+
+    - bash script-ci.sh
+
+  artifacts:
+    untracked: false
+    expire_in: "1 hour"
+    paths:
+      - android/app/build/outputs/bundle/release
+      - app-release.aab
+      
+      
+
+sign:
+  stage: sign
+  needs: ["build"]
+  image: openjdk:11
+  script:
+
+     - source secretes.sh
+     #- ls -l $PATH_TO_ABB_FILE
+     #- ls -1 $MYAPP_UPLOAD_STORE_FILE
+     - jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA1 -keystore $MYAPP_UPLOAD_STORE_FILE -storepass $MYAPP_UPLOAD_STORE_PASSWORD -keypass $MYAPP_UPLOAD_KEY_PASSWORD $PATH_TO_ABB_FILE $MYAPP_UPLOAD_KEY_ALIAS -signedjar app-release-signed.aab
+
+     
+  artifacts:
+    untracked: false
+    expire_in: "1 hour"
+    paths:
+      #- android/app/build/outputs/
+      - app-release-signed.aab
